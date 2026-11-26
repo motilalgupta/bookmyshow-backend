@@ -79,7 +79,7 @@ public class BookingService {
         return  mapToBookingDto(saveBooking,selectedSeats);
     }
 
-    private  BookingDto getBookingById(Long id){
+    public  BookingDto getBookingById(Long id){
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Booking Not Found"));
 
