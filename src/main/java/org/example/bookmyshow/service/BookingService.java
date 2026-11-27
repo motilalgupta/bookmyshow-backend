@@ -102,7 +102,6 @@ public class BookingService {
 
         return mapToBookingDto(booking,seats);
     }
-
     private List<BookingDto> getBookingByUserId(Long userId) {
 
         List<Booking> bookings = bookingRepository.findByUserId(userId);
@@ -118,7 +117,6 @@ public class BookingService {
                 })
                 .collect(Collectors.toList());
     }
-
 
     @Transactional
     public BookingDto cancelTicket(Long id){

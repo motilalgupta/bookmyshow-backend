@@ -67,7 +67,7 @@ public class ShowService {
     }
 
     public List<ShowDto> getShowByMovieId(Long movieId){
-        List<Show> shows = showRepository.findByMovieID(movieId);
+        List<Show> shows = showRepository.findByMovieId(movieId);
             shows.stream()
                     .map(show->{
                         List<ShowSeat> availableSeats = showSeatRepository.findByShowIdAndStatus(show.getId(),"AVAILABLE");

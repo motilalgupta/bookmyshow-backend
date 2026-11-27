@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface ShowRepository extends JpaRepository<Show,Long> {
 
-    List<Show> findByMovieID(Long movieId);
+    List<Show> findByMovieId(Long movieId);
     List<Show> findByScreenId(Long screenId);
     List<Show> findByStartTimeBetween(LocalDateTime start, LocalDateTime end);
     List<Show> findByMovie_IdAndScreen_Theater_City(Long id, String city);

@@ -36,6 +36,6 @@ public class Show {
     private List<ShowSeat> showSeats;
 
     @OneToMany(mappedBy = "show",cascade = CascadeType.ALL)
-    private Booking booking;
+    private List<Booking> bookings;
 
 }

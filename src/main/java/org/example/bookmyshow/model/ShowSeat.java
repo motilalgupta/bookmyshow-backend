@@ -33,6 +33,6 @@ public class ShowSeat {
     private Double seatNumber;
 
     @ManyToOne
-    @JoinColumn(name="booking_id",nullable = false)
+    @JoinColumn(name="booking_id")
     private Booking booking;
 }

@@ -16,7 +16,7 @@ import org.springframework.web.service.annotation.PostExchange;
 public class BookingController {
 
     @Autowired
-    BookingService bookingService;
+    private BookingService bookingService;
 
     @PostMapping
     public ResponseEntity<BookingDto> createBooking(@Valid @RequestBody BookingRequestDto bookingRequest){
@@ -27,7 +27,5 @@ public class BookingController {
     public ResponseEntity<BookingDto> getBookingById(@PathVariable Long id){
         return ResponseEntity.ok(bookingService.getBookingById(id));
     }
-
-
 
 }
